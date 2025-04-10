@@ -1,0 +1,150 @@
+/* General Reset for Gallery */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Particles Background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Gallery Container Styling */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background for gallery */
+    border-radius: 10px;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border-radius: 15px;
+}
+
+/* Hover Effects for Images */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Larger shadow on hover */
+}
+
+/* Zoom-In Effect */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Image zoom effect */
+    filter: brightness(1.2); /* Brightens the image slightly */
+}
+
+/* Hover Caption Decoration */
+.gallery-item:hover::before {
+    content: 'View in Detail'; /* Adds text overlay */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Individual Image Description Styling */
+.gallery-item p {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;  /* White text for better readability on dark background */
+    margin-top: 15px;
+}
+
+/* Go Back Button Styling */
+.go-back-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.go-back-btn {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffd700;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.go-back-btn:hover {
+    background-color: #f7c500;
+    transform: scale(1.1);
+}
+
+/* Decorative Golden Border for Gallery Items */
+.gallery-item {
+    border: 5px solid #ffd700; /* Golden border around gallery items */
+    transition: border 0.3s ease;
+}
+
+/* Hover Effect for Golden Border */
+.gallery-item:hover {
+    border: 5px solid #f7c500; /* Slightly brighter gold when hovered */
+}
+
+/* Animation for Gallery Appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-container {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        margin: 0 5px;
+    }
+}

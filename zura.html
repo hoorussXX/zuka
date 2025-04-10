@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ოქროს კვეტა - არქიტექტურული გალერეა</title>
+    <link rel="stylesheet" href="zura.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    <!-- Main Content -->
+    <main>
+        <section id="gallery" class="section">
+            <h2>არქიტექტურული გალერეა</h2>
+            
+            <!-- Go Back Button -->
+            <div class="go-back-container">
+                <a href="index.html" class="go-back-btn">უკან დაბრუნება</a>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="prop.jpg" alt="Golden Building 1">
+                    <p>ოქროს კვეთა სტილის უნიკალური შენობა, რომელიც არქიტექტურულად აღფრთოვანებს.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="ddx.jpg" alt="Golden Building 2">
+                    <p>მოიცავს ორგანული და გლუვი ფორმების შერწყმას, რომელიც ბუნებრივ არქიტექტურულ სტილთან ჰარმონიულად შედის.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Villa-Emo-Elevation.jpg" alt="Golden Building 3">
+                    <p>მხატვრული შენობა, სადაც ოქროს დეტალები და გლუვი ხაზები ერთმანეთს ერწყმის.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="haha.jpg" alt="Golden Building 4">
+                    <p>ბუნებრივი ელემენტების შერწყმა თანამედროვე არქიტექტურაში.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images (1).jpg" alt="Golden Building 5">
+                    <p>ოქროს კვეთა სტილის კიდევ ერთი უნიკალური ნამუშევარი.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="dam.jpg" alt="Golden Building 6">
+                    <p>არქიტექტურული კონცეფციის ექსპერიმენტული ელემენტები.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Particles JS Script -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffd700"  // Golden color particles
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#fff"
+                    },
+                    polygon: {
+                        nb_sides: 6
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 0.5,
+                        opacity_min: 0.1
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 4,
+                        size_min: 0.1
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffd700",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "window",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
